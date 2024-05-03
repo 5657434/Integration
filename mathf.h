@@ -1,20 +1,23 @@
 /*! @file mathf.h
-    @brief library of functions for computing integrals
-    @author Paolo Gastaldo
+	@brief Library of functions for computing integrals 
+	@author Paolo Gastaldo
 
-    details.
-*/
+	Details.
+*/ 
 
-#ifndef MATHF_H
+
+#ifndef MATHF_H 
 #define MATHF_H
 
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h> 
 #include <string.h>
+#include "structs.h"
 
-double Polynomial(double* coeff, int size, double in);
-void Rectangular(double* values, int size, double stepsize, double* integ1, double* integ2);
-double Trapezoidal(double* values, int size, double stepsize);
+float Polynomial(poly_s polyf, float in); 
+void Rectangular(float* values, int size, float stepsize, float* integ1, float* integ2); 
+float Trapezoidal(float* values, int size, float stepsize); 
+
+ 
 
 #endif
-
